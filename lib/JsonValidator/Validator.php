@@ -67,11 +67,15 @@
                 throw new \Exception($error,400);
             }
             // everything is OK
-            if($response === 'json'){
+            if($response === 'valid'){
                 return true;
-            } elseif($response === 'array') {
+            }elseif($response === 'json') {
+                return $string;
+
+            }elseif($response === 'array') {
                 return json_decode($string,true);
-            }elseif ($response === 'obj'){
+            }
+            elseif ($response === 'obj'){
                 return $result;
             } else {
                 return null;

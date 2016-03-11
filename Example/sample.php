@@ -4,6 +4,10 @@
 
     $validator = new JsonValidator\Validator();
 
-    var_dump($validator->validatePayload(json_encode([
-                    'key' => 'value'
-                ])));
+    $payload = json_encode([
+            'key' => 'value'
+        ]);
+
+    if($validator->validatePayload($payload,'json') === true){
+        //do something
+    };

@@ -30,7 +30,7 @@
                     json_encode(array(
                             'key' => 'value'
                         )),
-                    $response = 'json'));
+                    $response = 'valid'));
 
         }
 
@@ -82,5 +82,20 @@
                     $response = 'obj'
                 ));
         }
+
+        /**
+         * @test
+         */
+        function checkJsonIsReturnedWhenAsked()
+        {
+            $this->assertJson(
+                $this->obj->validatePayload(
+                    json_encode(array(
+                            'key' => 'value'
+                        )),
+                    $response = 'json'
+                ));
+        }
+
     }
  
