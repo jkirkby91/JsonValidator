@@ -60,13 +60,27 @@
         /**
          * @test
          */
-        function checkObjectIsReturned()
+        function checkObjectIsReturnedByDefault()
         {
             $this->assertObjectHasAttribute('key',
                 $this->obj->validatePayload(
             json_encode(array(
                     'key' => 'value'
                 ))));
+        }
+
+        /**
+         * @test
+         */
+        function checkObjectIsReturnedWhenAsked()
+        {
+            $this->assertObjectHasAttribute('key',
+                $this->obj->validatePayload(
+                    json_encode(array(
+                            'key' => 'value'
+                        )),
+                    $response = 'obj'
+                ));
         }
     }
  
