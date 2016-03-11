@@ -5,7 +5,7 @@
 Simple PHP class if you work with API's a lot to validate json payloads and response bodies
 
 # To install
- composer require jkirkby91/jsonvalidator
+   composer require jkirkby91/jsonvalidator
 
 # Validate Json string
 
