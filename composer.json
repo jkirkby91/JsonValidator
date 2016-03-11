@@ -1,0 +1,69 @@
+{
+  "name": "jkirkby91/jsonvalidator",
+  "type": "library",
+  "description": "Simple Json validator for php",
+  "keywords": [ "json","validator" ],
+  "homepage": "https://github.com/jkirkby91/JsonValidator",
+  "license": "MIT",
+  "authors": [
+    { "name": "James Kirkby", "email": "jkirkby01@gmail.com" }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "vladahejda/phpunit-assert-exception": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.7",
+    "phpunit/dbunit": ">=1.2",
+    "phpunit/php-invoker": "^1.1",
+    "phpunit/test-listener-xhprof": "dev-master",
+    "lox/xhprof": "dev-master@dev",
+    "raveren/kint": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "JsonValidator\\": "lib"
+    },
+    "psr-0": {
+      "JsonValidator": "lib"
+    }
+  },
+  "scripts": {
+    "pu": [
+      "./vendor/bin/phpunit"
+    ],
+    "pu-coverage": [
+      "./vendor/bin/phpunit --coverage-html coverage"
+    ],
+    "gaa": [
+      "git add --all"
+    ],
+    "gpom": [
+      "@gp"
+    ],
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ],
+    "build-live-project": [
+      "@composerTimeout",
+      "@composerInstallLive",
+      "@npmInstall",
+      "@bowerInstall",
+      "@gulpBuild"
+    ],
+    "build-dev-project": [
+      "@composerTimeout",
+      "@composerInstallDev",
+      "@npmInstall",
+      "@bowerInstall",
+      "@gulpBuild"
+    ],
+    "composerTimeout": "composer config process-timeout 4000",
+    "composerInstallLive": "composer install --prefer-dist --no-dev",
+    "composerInstallDev": "composer install",
+    "npmInstall": "npm install -y",
+    "bowerInstall": "bower install --allow-root",
+    "gulpBuild": "gulp build",
+    "gp": "git pull origin master"
+  }
+}
