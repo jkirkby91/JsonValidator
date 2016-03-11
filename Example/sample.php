@@ -8,6 +8,6 @@
             'key' => 'value'
         ]);
 
-    if($validator->validatePayload($payload,'json') === true){
+    if($validator->validatePayload($payload,'valid') === true){
         //do something
     };
