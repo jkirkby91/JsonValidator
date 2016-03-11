@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/jkirkby91/JsonValidator.svg?branch=master)](https://travis-ci.org/jkirkby91/JsonValidator)
 
+[![Code Climate](https://codeclimate.com/github/jkirkby91/JsonValidator/badges/gpa.svg)](https://codeclimate.com/github/jkirkby91/JsonValidator)
+
+[![Test Coverage](https://codeclimate.com/github/jkirkby91/JsonValidator/badges/coverage.svg)](https://codeclimate.com/github/jkirkby91/JsonValidator/coverage)
+
 Simple PHP class if you work with API's a lot to validate json payloads and response bodies
 
 # To install
